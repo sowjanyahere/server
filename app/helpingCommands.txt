@@ -1,0 +1,76 @@
+db.datas.find({"orderDate" : { $lte : new ISODate("2024-05-04T20:15:31Z") }},{"type":1});
+
+db.datas.aggregate(
+   [
+     {
+       $project:
+         {
+           year: { $year: "$orderDate" },
+           month: { $month: "$orderDate" },
+           day: { $dayOfMonth: "$orderDate" },
+           hour: { $hour: "$orderDate" },
+           minutes: { $minute: "$orderDate" },
+           seconds: { $second: "$orderDate" },
+           milliseconds: { $millisecond: "$orderDate" },
+           dayOfYear: { $dayOfYear: "$orderDate" },
+           dayOfWeek: { $dayOfWeek: "$orderDate" },
+           week: { $week: "$orderDate" },
+	  type: 1
+         }
+     }
+   ]
+)
+
+
+db.datas.aggregate(
+[
+    {
+        $group:
+        {
+            _id:
+            {
+                year: { $year: "$orderDate" },
+           	month: { $month: "$orderDate" },
+           	day: { $dayOfMonth: "$orderDate" },
+            }, 
+            count: { $sum:1 }
+        }
+    }
+])
+
+/****Yearly**/
+
+db.datas.aggregate(
+[
+    {
+        $group:
+        {
+            _id:
+            {
+                year: { $year: "$orderDate" }
+            }, 
+            count: { $sum:1 }
+        }
+    }
+])
+
+
+db.datas.aggregate([
+    {
+        $group: 
+        {
+            _id:
+            {
+                month: { $month: "$orderDate" }
+            }, 
+            count: { $sum:1 }
+        }
+    }, 
+    {
+        $sort: {"_id.month": 1}
+    }
+])
+
+
+
+<Line data={chartData} />

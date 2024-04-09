@@ -1,0 +1,78 @@
+[{
+  "_id": 0,
+  "type": "chocolate",
+  "orderDate": {
+    "$date": "2020-05-18T14:10:30.000Z"
+  }
+},
+{
+  "_id": 1,
+  "type": "strawberry",
+  "orderDate": {
+    "$date": "2021-03-20T11:30:05.000Z"
+  }
+},
+{
+  "_id": 2,
+  "type": "vanilla",
+  "orderDate": {
+    "$date": "2021-01-15T06:31:15.000Z"
+  }
+},
+{
+  "_id": 3,
+  "type": "ButterScooth",
+  "orderDate": {
+    "$date": "2020-05-28T14:10:30.000Z"
+  }
+},
+{
+  "_id": 4,
+  "type": "BlackCurrent",
+  "orderDate": {
+    "$date": "2020-03-20T11:30:05.000Z"
+  }
+},
+{
+  "_id": 5,
+  "type": "RedCurrent",
+  "orderDate": {
+    "$date": "2021-08-02T06:31:15.000Z"
+  },
+  {
+  "_id": 6,
+  "type": "Butter Pecan",
+  "orderDate": {
+    "$date": "2023-10-12T06:31:15.000Z"
+  },
+  {
+  "_id": 7,
+  "type": "RedCurrent",
+  "orderDate": {
+    "$date": "2023-02-14T06:31:15.000Z"
+  },
+  {
+  "_id": 8,
+  "type": "RedCurrent",
+  "orderDate": {
+    "$date": "2023-05-12T06:31:15.000Z"
+  },
+  {
+  "_id": 9,
+  "type": "Rocky Road",
+  "orderDate": {
+    "$date": "2023-09-26T06:51:15.000Z"
+  },
+  {
+  "_id": 10,
+  "type": "Chocolate Chip Cookie Dough",
+  "orderDate": {
+    "$date": "2021-08-02T06:31:15.000Z"
+  },
+  {
+  "_id": 11,
+  "type": "Cookies n' Cream",
+  "orderDate": {
+    "$date": "2021-08-02T12:31:15.000Z"
+  },
+}]
