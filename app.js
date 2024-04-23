@@ -2,6 +2,7 @@ const express = require("express");
 var cors = require('cors')
 const app = express();
 const mongoose = require("mongoose");
+const Outcomes = require("./app/models/outcomesData")
 
 const apiRouter = require("./app/routers/Router");
 
@@ -14,7 +15,6 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
   res.send('Hello World!')
 });
-
 app.use("/api", apiRouter);
 
 const PORT = 3040;
